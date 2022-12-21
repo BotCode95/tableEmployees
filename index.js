@@ -37,7 +37,11 @@ function createButtonEmployee(text,className,data, functionClick, idFila) {
 
     
     button.addEventListener('click', function() {
+      if(idFila) {
         functionClick(data, idFila)
+      } else {
+        functionClick(data)
+      }
     })
     return tdButton
 }
